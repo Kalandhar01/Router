@@ -1,14 +1,12 @@
 import { AlignCenter, UserRoundPen } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../index.css';
 
+
+
+
 const Nav = () => {
-
-
-
-
-
-
   return (
     <>
       <nav className='w-auto h-10 bg-slate-300 m-5 flex justify-between rounded-lg font-serif sm:justify-between'>
@@ -17,47 +15,33 @@ const Nav = () => {
         </div>
 
         <div className='relative p-2 mr-32 max-sm:hidden'>
-          <ul className='flex gap-8 '>
+          <ul className='flex gap-8'>
+           
+            <li className='hover:underline'>
+              <Link to={'/'}>Home</Link>
+            </li>
 
+            <li className='hover:underline'>
+              <Link to={'/about'}>About</Link>
+            </li>
 
-            <li className='hover:underline '>Home</li>
+            <li className='hover:underline'>
+              <Link to={'/contact'}>Contact</Link>
+            </li>
+            
+            <li className='hover:underline'>
+              <Link to={'/blog'}>Blog</Link>
+            </li>
 
-
-
-
-      
-            <li className='hover:underline '>About</li>
-              
-
-
-
-            <li className='hover:underline '>Contact</li>
-            <li className='hover:underline '>Blog</li>
-
-
-            </ul>
-
+          </ul>
         </div>
 
+        <AlignCenter className='sm:hidden mt-2 mr-3' />
 
-        <AlignCenter className='sm:hidden mt-2 mr-3 ' />
-
-
-
-        {/* <div class="mr-5 relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer">
-    <svg   class="rounded-md max-w-sm mx-auto h-auto shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400 absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-</div> */}
-
-
-        <UserRoundPen className='mr-5 mt-2 cursor-pointer max-sm:hidden ' />
-
-
-
-
+        <UserRoundPen className='mr-5 mt-2 cursor-pointer max-sm:hidden' />
       </nav>
-
     </>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

@@ -6,19 +6,27 @@ import Blog from './router/Blog';
 import Contact from './router/Contact';
 import LandingPage from './router/LandingPage';
 
+import Default from './layout/Default';
+
 const App = () => {
   return (
     <>
 
       <BrowserRouter>
-      <Nav/>
+        <Nav/>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />  
-          <Route path="/blog" element={<Blog />} />
+
+            <Route path="/" element={<Default />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+  
+
         </Routes>
       </BrowserRouter>
+
+      {/* <Blog/> */}
+
     </>
   );
 };

@@ -1,27 +1,68 @@
 import { AlignCenter, UserRoundPen } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../index.css';
 
 
 
 
 const Nav = () => {
+
+
+  const data = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    {
+      name: 'About',
+      path: '/about'
+    },
+    {
+      name: 'Contact',
+      path: '/contact'
+    },
+    {
+      name: 'Blog',
+      path: '/blog'
+    },
+
+
+
+
+  ]
+
+
+
   return (
     <>
-      <nav className='w-auto h-10 bg-slate-300 m-5 flex justify-between rounded-lg font-serif sm:justify-between'>
+      <nav className='w-auto h-10   bg-inherit m-5 flex justify-between rounded-lg font-serif sm:justify-between '>
         <div className='ml-10'>
           <h1 className='text-2xl font-serif font-medium py-1 ml-2'>Portfolio</h1>
         </div>
 
         <div className='relative p-2 mr-32 max-sm:hidden'>
-          <ul className='flex gap-8'>
-           
-            <li className='hover:underline'>
-              <Link to={'/'}>Home</Link>
-            </li>
+          <ul className='flex gap-8 font-light'>
 
-            <li className='hover:underline'>
+
+
+
+            {
+           
+              data.map((data, index) => (
+                <li key={index} className='hover:underline'>
+                  <NavLink to={data.path}>{data.name}</NavLink>
+                </li>
+              )
+            )
+             
+             
+            }
+
+
+
+
+            {/* <li className='hover:underline'>
               <Link to={'/about'}>About</Link>
             </li>
 
@@ -31,7 +72,7 @@ const Nav = () => {
             
             <li className='hover:underline'>
               <Link to={'/blog'}>Blog</Link>
-            </li>
+            </li> */}
 
           </ul>
         </div>

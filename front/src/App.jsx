@@ -7,12 +7,13 @@ import Contact from './router/Contact';
 import LandingPage from './router/LandingPage';
 
 import Default from './layout/Default';
+import Ref from './State/Ref';
 
 const App = () => {
   return (
     <>
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Nav/>
         <Routes>
 
@@ -23,8 +24,8 @@ const App = () => {
   
 
         </Routes>
-      </BrowserRouter>
-
+      </BrowserRouter> */}
+    <Ref/>
       {/* <Blog/> */}
 
     </>

@@ -21,6 +21,7 @@ const LandingPage = () => {
         <>
        
        <div className='bg-slate-100 ml-5 mr-5 '>
+        
          <motion.div
       initial={{ y: 100, opacity: 0 }}   
       animate={{ y: 0, opacity: 1 }}   

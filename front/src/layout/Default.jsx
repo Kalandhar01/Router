@@ -10,7 +10,7 @@ const Default = () => {
   return (
     <>
       <LandingPage/>
-      <About />
+      {/* <About /> */}
       <Contact/>
       <Blog/>
     </>

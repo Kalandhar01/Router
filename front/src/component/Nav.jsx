@@ -32,6 +32,8 @@ const Nav = () => {
 
   ]
 
+ 
+
 
 
   return (
@@ -48,15 +50,15 @@ const Nav = () => {
 
 
             {
-           
+
               data.map((data, index) => (
                 <li key={index} className='hover:underline'>
                   <NavLink to={data.path}>{data.name}</NavLink>
                 </li>
               )
-            )
-             
-             
+              )
+
+
             }
 
 
@@ -77,9 +79,20 @@ const Nav = () => {
           </ul>
         </div>
 
-        <AlignCenter className='sm:hidden mt-2 mr-3' />
+        <AlignCenter className='sm:hidden mt-2 mr-3'      
+         onClick={() => {
+          console.log("hello");          }
+         } 
 
-        <UserRoundPen className='mr-5 mt-2 cursor-pointer max-sm:hidden' />
+
+
+         />
+
+        <UserRoundPen className='mr-5 mt-2 cursor-pointer max-sm:hidden'
+         onClick={() => {
+          console.log("hello");          }
+         }
+          />
       </nav>
     </>
   );

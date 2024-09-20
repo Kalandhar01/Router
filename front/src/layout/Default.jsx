@@ -5,10 +5,12 @@ import Contact from '../router/Contact'
 import Blog from '../router/Blog'
 
 const Default = () => {
+
+  
   return (
     <>
       <LandingPage/>
-      <About/>
+      <About />
       <Contact/>
       <Blog/>
     </>

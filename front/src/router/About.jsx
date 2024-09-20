@@ -1,96 +1,94 @@
-import { motion } from 'framer-motion';
-import my from '../assets/my.png';
+import React, { useEffect, useState } from 'react';
+import bg from '../assets/Logo/bg.jpg';
+import sprink from '../assets/Logo/sprink.png';
 
 const About = () => {
+  const [count, setCount] = useState(0);
+  const [project, setProject] = useState(0);
+
+  useEffect(() => {
+    const incrementCount = () => {
+      for (let i = 0; i <= 2; i++) {
+       
+        setTimeout(() => {
+          setCount(i);
+        }, i * 1000); 
+      }
+    };
+    incrementCount();
+  }, []);
+
+
+  useEffect(() => {
+    const incrementCount = () => {
+      for (let i = 0; i <= 10; i++) {
+       
+        setTimeout(() => {
+          setProject(i);
+        }, i * 500); 
+      }
+    };
+    incrementCount();
+  }, []);
+
+
+
+
+
+
   return (
-
-
-    <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-
-    >
-
-      <div className=' ml-5 mr-5 '>
-
-        <div className='  w-auto h-full flex justify-center  '>
-
-          <div className='m-4'>
-            <h1 className='text-[42px]  font-sans font-bold'>ABOUT <span className='text-[#313BAC]'>ME</span></h1>
-
-            <h3 className='text-[#313BAC] font-sans font-bold text-[23px] pl-4'>My Introduction</h3>
+    <>
+      <div className='w-full h-screen flex pt-16 px-7 ml-5 max-sm:flex-col max-sm:p-0 max-sm:m-0'>
+        {/* Left */}
+        <div className='w-[45%] flex pt-12 max-sm:w-full relative'>
+          <div className='absolute max-sm:hidden'>
+            <img src={sprink} alt="" />
+          </div>
+          <div className='m-20 max-sm:hidden max-sm:m-0'>
+            <img src={bg} className='' alt="" />
           </div>
 
-        </div>
-
-
-
-
-        <div className='flex mt-20  max-sm:flex-col'>
-
-
-          {/* Left */}
-          <div className='w-[50%] h-auto flex max-sm:flex justify-center items-center max-sm:w-[100%] max-sm:ml-4'>
-            <img className='w-[45%] max-sm:w-[100%] max-sm:mr-7 ' src={my} alt="" />
-
-          </div>
-
-
-          {/* right? */}
-          <div className='w-[50%] flex flex-col items-center max-sm:ml-6'>
-
-            {/* Right Content */}
-            <div className='w-full max-sm:mt-10  max-sm:ml-20 '>
-              <h1 className= 'sm:ml-[4rem] my-3'>i'm<span className='font-serif text-lg text-[#313BAC] text-[45px] ml-5 font-semibold'>Kalandhar</span></h1>
-
-              <p className='font-serif text-[35px] text-[#757575] max-sm:text-[30px] max-sm:ml-10 w-full '>Aspiring Software Developer
-              </p>
-
-              <br />
-
-            <h1 className='absolute w-[35%] text-justify max-sm:w-[70%]'>
-            I am currently pursuing a degree in Computer Science Engineering, I've learned languages like Java, Python, and C++, and gained a solid understanding of algorithms. I've focused on web development technologies, including HTML, CSS, and JavaScript. I've also delved into React.js, enhancing my skills in creating dynamic and responsive web applications.
+          <div className='absolute bottom-[400px] left-[1.6rem] bg-white w-[170px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl'>
+            <h1 className='text-[35px] text-[#1CBE59] font-sans primary_text mr-4'>{count}</h1>
+            <h1 className='primary_text font-bold'>
+              Years of <br /> React
             </h1>
-
-              <div className='sm:mt-[11rem] flex flex-col justify-center items-center w-72'> 
-                    hello
-                <div className='w-[00px]   h-[50px]'>1</div>
-
-                <div className=''>2</div>
-                <div className=''>3</div>
-
-                
-              </div>
-              
-
-            </div>
-
           </div>
 
-
-
-
+          <div className='absolute bottom-[200px] left-[30rem] bg-white w-[170px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl'>
+            <h1 className='text-[35px] text-[#1CBE59] font-sans primary_text mr-1'>{project}+</h1>
+            <h1 className='primary_text font-bold'>
+             Project
+            </h1>
+          </div>
 
         </div>
 
 
 
 
+            {/* //right */}
+        <div className='p-20 ml-10 max-sm:p-0 w-[50%] max-sm:w-full max-'>
 
+          <div className='max-sm:ml-0'>
 
+            <h1 className='text-[22px] primary_text1 text-red-600 font-thin font-bold m-5 max-sm:text-center'>I'm a Web Developer</h1>
+            <h1 className='text-[35px] primary_text1  pr-20 font-thin font-semibold m-5'>I Can Design Anything You Want</h1>
+            <h1 className='text-[16px] primary_text1   font-thin font-thin m-5 line leading-9'>Hello there! I'm a web designer, and I'm very passionate and dedicated to my work. With 2 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</h1>
 
+            <a href="#_" class="ml-5 relative inline-flex items-center gap-2 px-9 py-2 overflow-hidden text-lg font-medium text-black-600 border-2 border-red-600 rounded-full hover:text-white group hover:bg-gray-50">
+<span class="absolute left-0 block w-full h-0 transition-all bg-red-400 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+<span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+</span>
+<span class="relative">Hire Me</span>
+</a>
+            
+          </div>
 
-
+        </div>
       </div>
-
-
-
-
-
-
-
-    </motion.div>
+    </>
   );
 };
 

@@ -1,33 +1,42 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './component/Nav';
 import About from './router/About';
 import Blog from './router/Blog';
 import Contact from './router/Contact';
 import LandingPage from './router/LandingPage';
-
-import Default from './layout/Default';
-// import Ref from './State/Ref';
+import Why from './router/Why';
+import Skill from './router/Skill';
 
 const App = () => {
   return (
     <>
-
-      <BrowserRouter>
-        <Nav/>
-        <Routes>
-
-            <Route path="/" element={<Default />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-  
-
-        </Routes>
-      </BrowserRouter>
    
-      {/* <Blog/> */}
+      <Nav />
 
+  
+      <div id="landing-page">
+        <LandingPage />
+      </div>
+
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="why">
+        <Why />
+      </div>
+
+      <div id="skills">
+        <Skill />
+      </div>
+
+      <div id="contact">
+        <Contact />
+      </div>
+
+      <div id="blog">
+        <Blog />
+      </div>
     </>
   );
 };

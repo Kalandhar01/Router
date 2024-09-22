@@ -42,7 +42,7 @@ const About = () => {
       <div className='bg-s-100 ml-5 mr-5 sm:mt-32 relative '>
 
           <img src={rec} alt=""  
-          className='absolute bottom-[70px] right-0'/>
+          className='absolute bottom-[70px] right-0 max-sm:hidden'/>
 
 
 

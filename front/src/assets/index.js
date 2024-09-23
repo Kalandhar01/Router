@@ -16,6 +16,10 @@ import email from '../assets/Conatct/message.gif'
 
 import left from '../assets/con_left.png'
 import right from '../assets/cont_right.png'
+import work from '../assets/work/1.gif'
+import qua from '../assets/work/3.gif'
+import  idea from '../assets/work/2.gif'
+import  idea1 from '../assets/work/idea1.gif'
 
 
 
@@ -38,6 +42,11 @@ export {
     right,
 
     location,
+
+    work,
+    qua,
+    idea,
+    idea1
 
     
 

@@ -20,9 +20,9 @@ const App = () => {
         </div>
 
         {/* Only load About component when needed */}
-        {/* <div id="about">
+        <div id="about">
           <About />
-        </div> */}
+        </div>
 
         <div id="why">
           <Why />

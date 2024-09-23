@@ -14,6 +14,9 @@ import phone from '../assets/Conatct/phone.gif'
 import location from '../assets/Conatct/location.gif'
 import email from '../assets/Conatct/message.gif'
 
+import left from '../assets/con_left.png'
+import right from '../assets/cont_right.png'
+
 
 
 
@@ -31,6 +34,9 @@ export {
     leftlogo1,
     phone,
     email,
+    left,
+    right,
+
     location,
 
     

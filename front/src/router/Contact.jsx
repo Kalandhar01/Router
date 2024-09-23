@@ -3,6 +3,8 @@ import {
   phone,
   email,
   location,
+  left,
+  right,
 } from '../assets'
 
 import { useState } from 'react';
@@ -41,9 +43,27 @@ const Contact = () => {
   return (
     <>
 
-      <div className='w-screen h-screen flex-col p-5 bg-slate-100  max-sm:h-full'>
+    <div className='p-5 max-sm:p-0'>
 
-        <div className='w-full h-30% flex justify-center mt-16  '>
+
+
+      <div className='wfull h-screen flex-col p-5 bg-slate-100  max-sm:h-full relative'>
+
+
+        <div className='absolute z-10 max-sm:hidden'> 
+          <img src={left} alt="" 
+          width={130} />
+
+        </div>
+
+        <div className='absolute z-10 max-sm:hidden bottom-0 right-0'> 
+          <img src={right} alt="" 
+          width={130} /> 
+
+        </div>
+
+
+        <div className='w-full h-30% flex justify-center mt-16  max-sm: '>
 
 
           <div className=' w-[45%] max-sm:w-full'>
@@ -188,6 +208,8 @@ const Contact = () => {
           </div>
 
         </div>
+      </div>
+
       </div>
 
 

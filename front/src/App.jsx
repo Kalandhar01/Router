@@ -1,42 +1,45 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Nav from './component/Nav';
-import About from './router/About';
-import Blog from './router/Blog';
-import Contact from './router/Contact';
-import LandingPage from './router/LandingPage';
-import Why from './router/Why';
-import Skill from './router/Skill';
+
+// Lazy loading components
+const About = lazy(() => import('./router/About'));
+const Blog = lazy(() => import('./router/Blog'));
+const Contact = lazy(() => import('./router/Contact'));
+const LandingPage = lazy(() => import('./router/LandingPage'));
+const Why = lazy(() => import('./router/Why'));
+const Skill = lazy(() => import('./router/Skill'));
 
 const App = () => {
   return (
     <>
-   
       <Nav />
 
-  
-      <div id="landing-page">
-        <LandingPage />
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="landing-page">
+          <LandingPage />
+        </div>
 
-      <div id="about">
-        <About />
-      </div>
+        {/* Only load About component when needed */}
+        {/* <div id="about">
+          <About />
+        </div> */}
 
-      <div id="why">
-        <Why />
-      </div>
+        <div id="why">
+          <Why />
+        </div>
 
-      <div id="skills">
-        <Skill />
-      </div>
+        <div id="skills">
+          <Skill />
+        </div>
 
-      <div id="contact">
-        <Contact />
-      </div>
+        <div id="contact">
+          <Contact />
+        </div>
 
-      <div id="blog">
-        <Blog />
-      </div>
+        <div id="blog">
+          <Blog />
+        </div>
+      </Suspense>
     </>
   );
 };

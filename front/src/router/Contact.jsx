@@ -149,7 +149,7 @@ const Contact = () => {
 
           <div className='w-[50%] mt-10 '>
             <form onSubmit={handleSubmit} className="max-w-lg max-sm:w-full ">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 max-sm:w-[300px]" >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 max-sm:w-[320px]" >
                 <input
                   type="text"
                   name="name"
@@ -169,7 +169,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 max-sm:w-[300px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 max-sm:w-[320px]">
                 <input
                   type="tel"
                   name="phone"
@@ -193,7 +193,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message here"
-                className="border border-gray-300 p-2 rounded-md w-full mb-4 h-32  bg-slate-100  max-sm:w-[300px]"
+                className="border border-gray-300 p-2 rounded-md w-full mb-4 h-32  bg-slate-100  max-sm:w-[320px]"
                 required
               />
               <button

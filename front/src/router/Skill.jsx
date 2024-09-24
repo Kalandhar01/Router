@@ -117,12 +117,12 @@ const Skill = () => {
           <SkillBar label="React.js" percentage={skills.react} />
         </div>
 
-        <div className="mt-14 flex max-sm:flex-col max-sm:mt-20 ">
-          <div className="left-[1.6rem] bg-white w-[200px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl max-sm:w-full max-sm:mb-3 mr-20 max-sm:mr-0">
+        <div className="mt-14 flex max-sm:flex-col max-sm:mt-20  ">
+          <div className="left-[1.6rem] bg-white w-[200px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl max-sm:w-full max-sm:mb-3 mr-20 max-sm:mr-0 hover:bg-slate-200">
             <h1 className="text-[35px] text-red-500 font-sans primary_text mr-1">{project} +</h1>
             <h1 className="primary_text font-bold primary_text1">Projects</h1>
           </div>
-          <div className="left-[1.6rem] bg-white w-[200px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl max-sm:w-full max-sm:mb-3">
+          <div className="left-[1.6rem] bg-white w-[200px] h-[100px] rounded-lg flex justify-center gap-2 items-center shadow-xl max-sm:w-full max-sm:mb-3  hover:bg-slate-200">
             <h1 className="text-[35px] text-red-500 font-sans primary_text ">{count} +</h1>
             <h1 className="primary_text font-bold primary_text1">Certifications</h1>
           </div>

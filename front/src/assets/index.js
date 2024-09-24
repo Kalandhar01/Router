@@ -20,6 +20,8 @@ import work from '../assets/work/1.gif'
 import qua from '../assets/work/3.gif'
 import  idea from '../assets/work/2.gif'
 import  idea1 from '../assets/work/idea1.gif'
+import  react from '../assets/Land/React Animated.gif'
+
 
 
 
@@ -46,7 +48,8 @@ export {
     work,
     qua,
     idea,
-    idea1
+    idea1,
+    react,
 
     
 

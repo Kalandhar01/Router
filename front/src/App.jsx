@@ -14,7 +14,7 @@ const App = () => {
     <>
       <Nav />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>   
         <div id="landing-page">
           <LandingPage />
         </div>
